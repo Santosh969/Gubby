@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DTUDY PLATFORM</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="leftheader">
+    <div class="sidebar-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </div>
+    <div class="sidebar-item">
+      <i class="fa-solid fa-bolt"></i>
+      <span>Shorts</span>
+    </div>
+    <div class="sidebar-item">
+      <i class="fa-solid fa-user"></i>
+      <span>You</span>
+    </div>
+    <div class="sidebar-item">
+      <i class="fa-solid fa-tv"></i>
+      <span>Subscription</span>
+    </div>
+    <div class="sidebar-item">
+      <i class="fa-solid fa-download"></i>
+      <span>Download</span>
+    </div>
+  </div>
+
+  <div id="page1">
+    <header>
+      <div id="topheader">
+        <div class="left-section">
+          <i class="fa-solid fa-bars"></i>
+          <img src="study-logo.png" alt="" class="logo-img">
+          <span class="logo">DTUDY</span>
+        </div>
+
+        <div class="center-section">
+          <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search">
+            <button class="clear-btn" onclick="document.getElementById('searchInput').value=''">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <button class="mic-btn"><i class="fa-solid fa-microphone"></i></button>
+          <button class="create-btn"><i class="fa-solid fa-plus"></i> CREATE</button>
+          <div class="importance-wrapper">
+            <button class="importance-btn"><i class="fa-solid fa-star"></i> IMPORTANCE</button>
+            <div class="importance-popup">
+              <h3>Important List</h3>
+              <ul>
+                <li>📌 Important Note 1</li>
+                <li>📌 Important Note 2</li>
+                <li>📌 Important Note 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <i class="fa-solid fa-video"></i>
+          <i class="fa-regular fa-bell"></i>
+          <div id="addlogin"><i class="fa-solid fa-user-circle"></i>
+              <a href="LOGIN_PAGES/login.html">login</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="toptopheader">
+        <button class="scroll-btn left-btn">&lt;</button>
+        <div class="categories-wrapper">
+          <div class="categories">
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+            <span class="category active">All</span>
+            <span class="category">Live</span>
+          </div>
+        </div>
+        <button class="scroll-btn right-btn">&gt;</button>
+      </div>
+    </header>
+  </div>
+
+  <div id="page2">
+    <div class="video-item">Video 1</div>
+    <div class="video-item">Video 2</div>
+    <div class="video-item">Video 3</div>
+    <div class="video-item">Video 4</div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

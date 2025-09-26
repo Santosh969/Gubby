@@ -26,7 +26,7 @@ function loadMoreVideos() {
         videoCount++;
         const div = document.createElement('div');
         div.className = 'video-item';
-        div.textContent = Video ${videoCount};
+        div.textContent = `Video ${videoCount}`;
         page2.appendChild(div);
     }
 }

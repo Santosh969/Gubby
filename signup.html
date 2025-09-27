@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup Page</title>
+<link rel="stylesheet" href="signup.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="lamp-container">
+    <i class="fas fa-lightbulb" id="lamp"></i>
+    <input type="range" id="brightnessSlider" min="0" max="100" value="100">
+</div>
+
+<div class="page-wrapper" id="signupWrapper">
+    <div class="signup-page">
+        <h2>Create Account</h2>
+        <div class="name-fields">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="middleName" placeholder="Middle Name">
+            <input type="text" id="lastName" placeholder="Last Name" required>
+        </div>
+        <input type="email" id="email" placeholder="Email (Gmail)" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <div class="gender">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+        <label class="human-check">
+            <input type="checkbox" id="humanCheck" required> I'm not a robot
+        </label>
+
+        <button id="signupBtn">Sign Up</button>
+        <div class="clear-form">
+            <a href="#" id="clearForm">Clear Form</a>
+        </div>
+        <div class="home">
+            <span id="home">Home</span>
+        </div>
+        <div class="optional-google">
+            <p>Or sign up with <button id="googleBtn">Google</button> (Optional)</p>
+        </div>
+        <div class="login-link">
+            <p>Already have an account? <span id="loginLink">Login</span></p>
+        </div>
+    </div>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>

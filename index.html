@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DTUDY PLATFORM</title>
+  <link rel = "icon" href="./assets/edutube_icon.png">
+  <title>EduTube</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div id="leftheader">
     <div class="left-section">
-          <i class="fa-solid fa-bars"></i>
-        </div>
+      <i class="fa-solid fa-bars"></i>
+    </div>
     <div class="sidebar-item">
       <i class="fa-solid fa-house"></i>
       <span>Home</span>
@@ -33,26 +35,32 @@
       <span>Download</span>
     </div>
   </div>
-
   <div id="page1">
     <header>
       <div id="topheader">
         <div class="left-section">
-          <img src="study-logo.png" alt="" class="logo-img">
-          <span class="logo">DTUDY</span>
+          <img src="./assets/edutube_no_bg.png" alt="" class="logo-img">
         </div>
-
-
-        <div class="center-section">
+        <div class="center-section" id="centerSection">
           <div class="search-wrapper">
             <input type="text" id="searchInput" placeholder="Search">
-            <button class="clear-btn" onclick="document.getElementById('searchInput').value=''">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
             <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
-          <button class="mic-btn"><i class="fa-solid fa-microphone"></i></button>
-          <button class="create-btn"><i class="fa-solid fa-plus"></i> CREATE</button>
+          <div class="mice-wrapper">
+            <button class="mic-btn"><i class="fa-solid fa-microphone"></i></button>
+          </div>
+        </div>
+        <div class="btn">
+          <div class="create-wrapper">
+            <button class="create-btn"><i class="fa-solid fa-plus"></i> CREATE</button>
+            <div class="create-pop">
+              <ul>
+                <li><i class="fa-solid fa-video"></i> Create a Short</li>
+                <li><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload Video</li>
+                <li><i class="fa-solid fa-arrow-up-from-bracket"></i> Go Live</li>
+              </ul>
+            </div>
+          </div>
           <div class="importance-wrapper">
             <button class="importance-btn"><i class="fa-solid fa-star"></i> IMPORTANCE</button>
             <div class="importance-popup">
@@ -67,34 +75,44 @@
             </div>
           </div>
         </div>
-
         <div class="right-section">
-          <i class="fa-solid fa-video"></i>
-          <i class="fa-regular fa-bell"></i>
-          <div id="addlogin"><i class="fa-solid fa-user-circle"></i>
-              <a href="LOGIN_PAGES/login.html">login</a>
+          <div class="notification"><i class="fa-regular fa-bell"></i></div>
+          <div class="login-wrapper">
+            <div id="addlogin"><i class="fa-solid fa-user-circle"></i>
+              <div class="Login-popup">
+                <ul>
+                  <a href="#" class="channelview"><h4>View Your Channel</h4></a>
+                  <div class="horizontal-line"></div>
+                  <div class="loginAccount">
+                    <li id="both1"><div class="gicon"><i class="fa-brands fa-google"></i></div>Manage Your Google Account</li>
+                    <li id="both2"><div class="switchicon"><i class="fa-solid fa-user-check"></i></div>Switch Account<div class="arrow"><i class="fa-solid fa-chevron-right"></i></div></li>
+                    <li id="both3"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</li>
+                  </div>
+                  <div class="horizontal-line"></div>
+                  <div class="lanSection">
+                    <li id="both4"><i class="fa-solid fa-moon"></i>Appearance: Device Theme<div class="arrow"><i class="fa-solid fa-chevron-right"></i></div></li>
+                    <li id="both5"><i class="fa-solid fa-language"></i>Language<div class="arrow"><i class="fa-solid fa-chevron-right"></i></div></li>
+                    <li id="both6"><i class="fa-solid fa-globe"></i>Location<div class="arrow"><i class="fa-solid fa-chevron-right"></i></div></li>
+                  </div>
+                  <div class="horizontal-line"></div>
+                  <div class="settSection">
+                    <li id="both7"><i class="fa-solid fa-gear"></i>Setting</li>
+                  </div>
+                  <div class="horizontal-line"></div>
+                  <div class="helpSection">
+                    <li id="both8"><i class="fa-solid fa-circle-question"></i>Help</li>
+                    <li id="both9"><i class="fa-solid fa-circle-exclamation"></i>Send Feedback</li>
+                  </div>
+                </ul>               
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       <div id="toptopheader">
         <button class="scroll-btn left-btn">&lt;</button>
         <div class="categories-wrapper">
           <div class="categories">
-            <span class="category active">All</span>
-            <span class="category">Live</span>
-            <span class="category active">All</span>
-            <span class="category">Live</span>
-            <span class="category active">All</span>
-            <span class="category">Live</span>
-            <span class="category active">All</span>
-            <span class="category">Live</span>
-            <span class="category active">All</span>
-            <span class="category">Live</span>
-            <span class="category active">All</span>
-            <span class="category">Live</span>
-            <span class="category active">All</span>
-            <span class="category">Live</span>
             <span class="category active">All</span>
             <span class="category">Live</span>
             <span class="category active">All</span>
@@ -109,14 +127,12 @@
       </div>
     </header>
   </div>
-
   <span id="page2">
     <div class="video-item">Video 1</div>
     <div class="video-item">Video 2</div>
     <div class="video-item">Video 3</div>
     <div class="video-item">Video 4</div>
   </span>
-
   <script src="index.js"></script>
 </body>
 </html>

@@ -17,7 +17,6 @@ wrapper.addEventListener('scroll', () => {
     rightBtn.style.opacity = wrapper.scrollLeft >= maxScroll - 5 ? 0.5 : 1;
 });
 
-
 const page2 = document.getElementById('page2');
 let videoCount = 4;
 
@@ -59,10 +58,53 @@ importancePopup.addEventListener('click', (e) => {
     e.stopPropagation();
 });
 
-
 document.addEventListener('click', (e) => {
     if (!importanceWrapper.contains(e.target)) {
         popupLocked = false;
         importancePopup.style.display = 'none';
+    }
+});
+
+const loginWrapper = document.querySelector('.login-wrapper');
+const Loginpopup = document.querySelector('.Login-popup');
+let PopupLocked = false;
+
+loginWrapper.addEventListener('mouseenter', () => {
+    if (!PopupLocked) Loginpopup.style.display = 'block';
+});
+loginWrapper.addEventListener('mouseleave', () => {
+    if (!PopupLocked) Loginpopup.style.display = 'none';
+});
+
+Loginpopup.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+document.addEventListener('click', (e) => {
+    if (!loginWrapper.contains(e.target)) {
+        PopupLocked = false;
+        Loginpopup.style.display = 'none';
+    }
+});
+
+const createwrapper = document.querySelector('.create-wrapper');
+const createPop = document.querySelector('.create-pop');
+let PopLocked = false;
+
+createwrapper.addEventListener('mouseenter', () => {
+    if (!PopLocked) createPop.style.display = 'block';
+});
+createwrapper.addEventListener('mouseleave', () => {
+    if (!PopLocked) createPop.style.display = 'none';
+});
+
+createPop.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+document.addEventListener('click', (e) => {
+    if (!createwrapper.contains(e.target)) {
+        PopLocked = false;
+        createPop.style.display = 'none';
     }
 });

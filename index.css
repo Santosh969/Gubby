@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fafafa;
+    background-color: white;
 }
 
 #leftheader {
@@ -10,13 +10,12 @@ body {
     left: 0;
     bottom: 0;
     width: 100px;
-    background-color: white;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
     padding: 20px 0;
-    border-right: 1px solid #ddd;
     font-size: 18px;
 }
 
@@ -37,6 +36,11 @@ body {
     text-align: center;
 }
 
+#leftheader.left-section {
+    font-size: 24px;
+    cursor: pointer;
+}
+
 #topheader {
     position: fixed;
     top: 0;
@@ -46,11 +50,9 @@ body {
     background-color: #fff;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 20px;
     z-index: 1000;
-    border-bottom: 1px solid #ddd;
-
 }
 
 #topheader .left-section {
@@ -59,73 +61,103 @@ body {
     font-weight: bold;
     margin-right: 50px;
     cursor: pointer;
-    justify-content: space-;
+    font-size: large;
 }
 
 .logo-img {
-    height: 30px;
+    height: 140px;
     width: auto;
+    margin-left: -18px;
 }
-
-.logo {}
 
 #topheader .center-section {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex: 0.6;
-    max-width: 600px;
-    justify-content: space-between;
-    margin-left: 30px;
+    justify-content: center;
+    flex: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 12px;
+    transition: all 0.4s ease;
+}
+
+#topheader .center-section.shift-left {
+    margin-left: 0;
+    justify-content: flex-start;
 }
 
 .search-wrapper {
     display: flex;
     align-items: center;
     flex: 1;
+    max-width: 500px;
     border: 1px solid #ccc;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: #f8f8f8;
-    /* margin-left: 30px; */
+    border-radius: 40px;
+    background-color: #fff;
+    height: 40px;
 }
 
 .search-wrapper input {
-    flex: 10;
-    padding: 12px 16px;
+    flex: 1;
+    padding: 0 14px;
     border: none;
     outline: none;
+    font-size: 16px;
     background-color: transparent;
-    margin-right: 30px;
-}
-
-.search-btn,
-.clear-btn,
-.mic-btn,
-.create-btn {
-    border: none;
-    cursor: pointer;
 }
 
 .search-btn {
-    padding: 12px 12px;
-    background-color: #f1f1f1;
-}
-
-.clear-btn {
-    background-color: transparent;
-    padding: 0 8px;
+    width: 64px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 40px 40px 0;
+    background-color: #f8f8f8;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #555;
+    color: #333;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.mice-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mic-btn {
-    background-color: #f1f1f1;
+    background-color: #f8f8f8;
+    border: none;
     border-radius: 50%;
-    padding: 8px 10px;
-    left: 50px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 16px;
+}
+
+.mic-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.btn {
+    display: flex;
+    left: 100px;
+}
+
+.create-wrapper {
+    position: relative;
+    display: inline-block;
+    left: -10px;
 }
 
 .create-btn {
@@ -136,7 +168,34 @@ body {
     align-items: center;
     gap: 5px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
 
+.create-pop {
+    display: none;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    z-index: 1001;
+}
+
+.create-pop ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.create-pop li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #topheader .right-section {
@@ -147,18 +206,94 @@ body {
     cursor: pointer;
 }
 
+.notification {
+    position: relative;
+    left: 10px;
+}
+
+.Login-popup {
+    display: none;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    z-index: 1001;
+}
+
+.Login-popup ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.Login-popup li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Login-popup li .arrow {
+    margin-left: auto;
+}
+
+#both1,
+#both2,
+#both3,
+#both4,
+#both5,
+#both6,
+#both7,
+#both8,
+#both9 {
+    display: flex;
+    gap: 20px;
+}
+
+.horizontal-line {
+    display: none;
+}
+
+.loginAccount :hover,
+.lanSection :hover,
+.settSection :hover,
+.helpSection :hover {
+    background-color: #f8f8f8;
+}
+
+.horizontal-lineline {
+    border: none;
+
+    height: 2px;
+
+    background-color: #333;
+
+    width: 50%;
+
+    margin: 20px auto;
+
+}
+
+
 #toptopheader {
     position: fixed;
     top: 60px;
     left: 100px;
     right: 0;
     height: 50px;
-    background-color: #f9f9f9;
+    background-color: white;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ddd;
     padding: 0 5px;
     z-index: 999;
+    border-radius: 5px;
 }
 
 .categories-wrapper {
@@ -180,7 +315,7 @@ body {
 
 .category {
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 7px;
     background-color: #e5e5e5;
     font-weight: bold;
     white-space: nowrap;
@@ -217,15 +352,16 @@ body {
     margin-left: 100px;
     padding: 20px;
     min-height: 100vh;
-    background-color: #fafafa;
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    border: none;
 }
 
 .video-item {
     background-color: #ddd;
-    height: 200px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,11 +377,10 @@ body {
     }
 }
 
-
 .importance-wrapper {
     position: relative;
     display: inline-block;
-    left: 50px;
+    left: 0px;
 }
 
 .importance-btn {
@@ -289,4 +424,12 @@ body {
     margin-bottom: 6px;
     font-size: 14px;
     cursor: pointer;
+}
+
+.arrow {
+    left: 100px;
+}
+
+.switch {
+    display: flex;
 }
